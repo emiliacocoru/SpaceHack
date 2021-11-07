@@ -16,6 +16,8 @@ import Sidebar from '../components/sidebar/Sidebar'
 
 import statusCards from '../assets/JsonData/status-card-data.json'
 
+import logo from '../assets/images/twitter.png'
+
 const chartOptions = {
     series: [{
         name: 'Online Customers',
@@ -169,25 +171,22 @@ const Twitter = () => {
 
     const themeReducer = useSelector(state => state.ThemeReducer.mode)
 
+    const top_logo = {
+        display: "flex",
+        alignItems: "center",
+        justifyContent:"center"
+    }
     return (
         <div>
             <h2 className="page-header">Twitter</h2>
 
             <div className="row">
                 <div className="col-6">
-                    <div className="row">
-                        {
-                            statusCards.map((item, index) => (
-                                <div className="col-6" key={index}>
-                                    <StatusCard
-                                        icon={item.icon}
-                                        count={item.count}
-                                        title={item.title}
-                                    />
-                                </div>
-                            ))
-                        }
+                    
+                    <div style={top_logo}>
+                        <img src={logo} alt="company logo" />
                     </div>
+
                 </div>
                 <div className="col-6">
                     <div className="card full-height">

@@ -237,9 +237,9 @@ const Facebook = () => {
 
     const top_logo = {
         display: "flex",
-        backgroundColor: "black",
         alignItems: "center"
     }
+
     return (
         <div>
             <h2 className="page-header">Facebook</h2>
@@ -280,6 +280,25 @@ const Facebook = () => {
                     </div>
                 </div>
                 
+
+                <div className="col-4">
+                   <div className="card full-height">
+                        {/* chart */}
+                        <Chart
+                            options={themeReducer === 'theme-mode-dark' ? {
+                                ...options,
+                                theme: { mode: 'dark'}
+                            } : {
+                                ...options,
+                                theme: { mode: 'light'}
+                            }}
+                            series={chartOptions.series}
+                            type='radar'
+                            height='100%'
+                        />
+                    </div>
+                </div>
+
                 <div style={top_logo}>
                     <img src={logo} alt="company logo" />
                 </div>
@@ -299,24 +318,6 @@ const Facebook = () => {
                             type='radar'
                             height='100%'
                         />
-                    </div>
-                </div>
-                <div className="col-8">
-                    <div className="card">
-                        <div className="card__header">
-                            <h3>latest orders</h3>
-                        </div>
-                        <div className="card__body">
-                            <Table
-                                headData={latestOrders.header}
-                                renderHead={(item, index) => renderOrderHead(item, index)}
-                                bodyData={latestOrders.body}
-                                renderBody={(item, index) => renderOrderBody(item, index)}
-                            />
-                        </div>
-                        <div className="card__footer">
-                            <Link to='/'>view all</Link>
-                        </div>
                     </div>
                 </div>
             </div>

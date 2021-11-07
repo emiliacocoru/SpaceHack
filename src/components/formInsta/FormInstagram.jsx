@@ -52,43 +52,46 @@ const FormInstagram = () => {
     ];
 
     const hashtags = [
-        'mere', 'pere', 'cirese', 'mere', 'pere', 'cirese'
+        {hastag:'mere'},
+        {hastag:'pere'},
+        {hastag:'cirese'},
+        {hastag:'visini'}
+
     ]
     return (
         <div>
-            {result ? 
-            // starea initiala a proiectului
-            <div class="containerInsta">
-                 <div class="logoInsta">
-                    <div>
-                        <img src={logo} alt="company logo" />
-                    </div>
-                </div>
-                <div class="twoInsta">
-                    
-                    <div> Add your first post here: </div>
+            <div className="containerInsta">
+
+                <div className="textClass">
+                    <div> Add your post here: </div>
                     <form>
                         <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
                         <label for="nme"></label>
                     </form>
-                    <AddPicture />
+
+                    <button className="buttonInsta" onClick={saveText}>Generate</button>
                 </div>
 
-                <div className="alignButtons">
-                    <button className="buttonInsta" onClick={saveText}>Save text</button>
+                <div className="logoInsta">
+                        <img src={logo} alt="company logo" />
+                </div>
+                <div>
+                    <AddPicture />
                     <button className="buttonInsta" onClick={showResults}>Generate</button>
                 </div>
-            </div> : 
-            // resultatele obtinute prin compararea postarilor
-            <div class="containerInsta">
-                <div class="twoInsta">
-
-              
+            </div>
+            {result ? 
+            <div class="container">
+                <h2>Try this hashtags in your next post:</h2>
+                <div>
+                    {hashtags.map(item => (
+                        <div>{item.hastag}</div>
+                        ))}
                 </div>
 
-
-                <button className="buttonInsta" onClick={showResults}>Try again</button>  
+                
             </div>
+            : <div></div>
             }
         </div>
     )

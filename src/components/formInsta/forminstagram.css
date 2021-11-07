@@ -1,29 +1,20 @@
-.procent {
-    margin-top: 120px;
-  }
-  
-  .twoInsta{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-  }
-  
-  .containerInsta {
+ .containerInsta, .hashtags {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-  }
+    justify-content: center;
+}
   
-  .logoInsta {
+.logoInsta {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 25vh;
-    width: 25vh;  
+    height: 50vh;
+    width: 50vh;  
   }
-  
+  .textClass {
+      margin-left: -15vh;
+  }
   input:focus {
       outline: 0;
     }
@@ -50,7 +41,7 @@
       white-space: nowrap;
       padding: 0;
       margin: 0;
-      width: 25vw;
+      width: 20vw;
       border-top: 1px solid var(--main-color);
       -webkit-transition: width 0.4s ease;
       transition: width 0.4s ease;
@@ -96,7 +87,7 @@
     
     .buttonInsta {
       padding: 15px 25px;
-      margin-left: 15px;
+      margin-top: 20px;
       border-radius: var(--border-radius);
       background-image: linear-gradient(
           to right,

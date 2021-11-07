@@ -11,6 +11,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 import ThemeAction from '../../redux/actions/ThemeAction'
+import Footer from '../footer/Footer'
 
 
 const Layout = () => {
@@ -32,14 +33,16 @@ const Layout = () => {
     return (
         <BrowserRouter>
             <Route render={(props) => (
-                <div className={`layout ${themeReducer.mode} ${themeReducer.color}`}>
+                <div className={`layout ${themeReducer.mode} ${themeReducer.color}`} class='heightClass'>
                     <div className="layout__content">
                         <TopNav/>
                         <Sidebar {...props}/>
                         <div className="layout__content-main">
                             <Routes/>
                         </div>
+                        
                     </div>
+                    <Footer />
                 </div>
             )}/>
         </BrowserRouter>

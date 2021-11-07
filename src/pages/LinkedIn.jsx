@@ -19,7 +19,7 @@ import statusCards from '../assets/JsonData/status-card-data.json'
 import {useState} from 'react'
 import axios from 'axios'
 
-
+import logo from '../assets/images/linkedin.png'
 
 
 const topCustomers = {
@@ -141,7 +141,11 @@ const renderOrderBody = (item, index) => (
 
 
 const LinkedIn = () => {
-
+    const top_logo = {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+    }
     const themeReducer = useSelector(state => state.ThemeReducer.mode)
 
     const hours = []
@@ -248,18 +252,10 @@ const LinkedIn = () => {
                 <div className="col-4">
                     <div className="card full-height">
                         {/* chart */}
-                        <Chart
-                            options={themeReducer === 'theme-mode-dark' ? {
-                                ...chartOptions.options,
-                                theme: { mode: 'dark'}
-                            } : {
-                                ...chartOptions.options,
-                                theme: { mode: 'light'}
-                            }}
-                            series={chartOptions.series}
-                            type='area'
-                            height='100%'
-                        />
+                        <div style={top_logo}>
+                    <       img src={logo} alt="company logo" />
+                        </div>
+
                     </div>
                 </div>
                 <div className="col-8">
