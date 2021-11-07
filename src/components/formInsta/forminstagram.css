@@ -1,0 +1,109 @@
+.procent {
+    margin-top: 120px;
+  }
+  
+  .twoInsta{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+  }
+  
+  .containerInsta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .logoInsta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width: 25vh;  
+  }
+  
+  input:focus {
+      outline: 0;
+    }
+    /* Question */
+    
+    input.question,
+    textarea.question {
+      font-size: 20px;
+      font-weight: 300;
+      border-radius: 2px;
+      margin: 0;
+      border: none;
+      width: 25vw;
+      background: rgba(0, 0, 0, 0);
+      transition: padding-top 0.2s ease, margin-top 0.2s ease;
+      overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+    }
+    /* Underline and Placeholder */
+    
+    input.question + label,
+    textarea.question + label {
+      display: block;
+      position: relative;
+      white-space: nowrap;
+      padding: 0;
+      margin: 0;
+      width: 25vw;
+      border-top: 1px solid var(--main-color);
+      -webkit-transition: width 0.4s ease;
+      transition: width 0.4s ease;
+      height: 0px;
+    }
+    
+    input.question:focus + label,
+    textarea.question:focus + label {
+      width: 25vw;
+    }
+    
+    input.question:focus,
+    input.question:valid {
+      padding-top: 0px;
+    }
+    
+    textarea.question:valid,
+    textarea.question:focus {
+      margin-top: 0px;
+    }
+    
+    input.question:focus + label > span,
+    input.question:valid + label > span {
+      font-size: 11px;
+      color: #333;
+    }
+    
+    textarea.question:focus + label > span,
+    textarea.question:valid + label > span {
+      font-size: 11px;
+      color: #333;
+    }
+    
+    input.question:valid + label,
+    textarea.question:valid + label {
+      border-color: #A7D0CD;
+    }
+    
+    input.question:invalid,
+    textarea.question:invalid {
+      box-shadow: none;
+    }
+    
+    .buttonInsta {
+      padding: 15px 25px;
+      margin-left: 15px;
+      border-radius: var(--border-radius);
+      background-image: linear-gradient(
+          to right,
+          var(--main-color),
+          var(--second-color)
+      );
+      color: var(--txt-white);
+      font-size: 25px;
+      font-weight: bold;
+    }

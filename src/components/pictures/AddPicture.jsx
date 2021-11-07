@@ -48,7 +48,6 @@ const AddPicture = () => {
                     <div key={index} className="image-item">
                         <img src={image['data_url']} alt="" width="100" />
                         <div className="image-item__btn-wrapper">
-                        <button class="button-53" onClick={() => onImageUpdate(index)}>Update</button>
                         <button class="button-53" onClick={() => onImageRemove(index)}>Remove</button>
                         </div>
                     </div>
