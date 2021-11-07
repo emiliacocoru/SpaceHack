@@ -1,0 +1,28 @@
+
+.button-53 {
+  align-items: center;
+  background-color: var(--main-color);
+  border: 1px solid #111;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 24px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.upload__image-wrapper {
+    padding: 20px;
+}

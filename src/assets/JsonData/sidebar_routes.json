@@ -1,0 +1,27 @@
+[
+    {
+        "display_name": "Home",
+        "route": "/",
+        "icon": "bx bx-category-alt"
+    },
+    {
+        "display_name": "Twitter",
+        "route": "/twitter",
+        "icon": "bx bxl-twitter"
+    },
+    {
+        "display_name": "Instagram",
+        "route": "/instagram",
+        "icon": "bx bxl-instagram-alt"
+    },
+    {
+        "display_name": "Facebook",
+        "route": "/facebook",
+        "icon": "bx bxl-facebook-square"
+    },
+    {
+        "display_name": "LinkedIn",
+        "route": "/linkedin",
+        "icon": "bx bxl-linkedin-square"
+    }
+]
